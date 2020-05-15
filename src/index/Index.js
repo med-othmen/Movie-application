@@ -176,13 +176,14 @@ class Index extends React.Component {
     test.img = e.target.value
   }
   //Adding the film to movie list 
-  addfilm = () => {
+  addfilm = (e) => {
 
     if ((test.title === undefined) | (test.description === undefined) | (test.rate === undefined) | (test.cat === undefined))
       alert('svp saisir les données de nouveau film  ')
     else {
       test.id = Filmslist[Filmslist.length - 1].id + 1
       Filmslist.unshift(test);
+      alert(e.target.value)
       this.setState({ films: Filmslist });
       test = []
 
@@ -207,7 +208,7 @@ class Index extends React.Component {
     return <div className="Filmlist" >
       <Searchbar state={this.state} search={this.search} getrate={this.getrate} resetsearch={this.resetsearch} />
       <div className="main">
-        
+
         <div>
           <Cardmovies state={this.state} films={this.state.films} remove={this.removefilm} Filmslist={Filmslist} />
 

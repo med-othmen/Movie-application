@@ -10,12 +10,7 @@
     }
 
 
-    .btnsearch{
-        border-radius:  0 ;
-        width: 150px;
-        margin-left: 0.5cm;
-       
-    }
+
     .header{
         margin-top: 0cm;
         
@@ -30,7 +25,10 @@
       .utilisateur{
          
           display: flex;
-          
+          padding: 4px;
+          margin-right: 20px;
+         
+           
       }
       .utilisateur>div{
           margin-left: 1cm;

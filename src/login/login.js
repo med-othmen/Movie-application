@@ -40,17 +40,18 @@ class Login extends React.Component {
       e.target.style.border = "3px solid red";
     }
   }
-  Log=()=>{
-alert('r')
+  Log = () => {
+    alert('r')
   }
 
   signin = () => {
     let filter1 = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
     let filter2 = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
-    if ((filter2.test(this.state.email)) && (filter1.test(this.state.password)) && (localStorage.getItem('mdp') === this.state.password) && (localStorage.getItem('email') === this.state.email))
-    {alert('bienvenue'+localStorage.getItem('nom'))
-    this.props.history.push("/index")}
+    if ((filter2.test(this.state.email)) && (filter1.test(this.state.password)) && (localStorage.getItem('mdp') === this.state.password) && (localStorage.getItem('email') === this.state.email)) {
+      alert('bienvenue' + localStorage.getItem('nom'))
+      this.props.history.push("/index")
+    }
 
     else alert('vous devez s inscrire  avant ')
 
@@ -61,25 +62,26 @@ alert('r')
   render() {
     return (<div className="login">
       <Form className="Form">
+        <div className='inputlogin'>
+          <FormGroup >
+            <Label for="exampleEmail" sm={10} >Email</Label>
+            <Col sm={12}>
+              <Input type="email" name="email" id="exampleEmail" value={this.state.email} placeholder="E-mail" bsSize="lg" onChange={this.verifmail} />
+            </Col>
+          </FormGroup>
 
-        <FormGroup >
-          <Label for="exampleEmail" sm={10} >Email</Label>
-          <Col sm={10}>
-            <Input type="email" name="email" id="exampleEmail" value={this.state.email} placeholder="E-mail" bsSize="lg" onChange={this.verifmail} />
-          </Col>
-        </FormGroup>
+          <FormGroup >
+            <Label for="exampleEmail2" sm={10}>Mot de passe</Label>
+            <Col sm={12}>
+              <Input type="password" name="email" id="exampleEmail2" placeholder="Mot de passe" onChange={this.verifpswd} />
+            </Col>
+          </FormGroup>
+        </div>
+        <div className="buttons">
+          <Link to='/Register'>  <ButtonToggle className="CI2" color="danger" float="right" onClick={this.signup}>S'inscrire</ButtonToggle></Link>
+          <ButtonToggle className="CI1" color="warning" onClick={this.signin}>Se connecter</ButtonToggle>
+        </div>
 
-        <FormGroup >
-          <Label for="exampleEmail2" sm={10}>Mot de passe</Label>
-          <Col sm={10}>
-            <Input type="password" name="email" id="exampleEmail2" placeholder="Mot de passe" onChange={this.verifpswd} />
-          </Col>
-          <div className="buttons">
-            <Link to='/Register'>  <ButtonToggle className="CI2" color="danger" float="right" onClick={this.signup}>S'inscrire</ButtonToggle></Link>
-             <ButtonToggle className="CI1" color="warning" onClick={this.signin}>Se connecter</ButtonToggle>
-          </div>
-
-        </FormGroup>
 
       </Form>
     </div>

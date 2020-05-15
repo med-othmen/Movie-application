@@ -4,6 +4,7 @@ import "./cardMovie.css";
 import { FaStar, FaHeart, FaRegTrashAlt, FaPencilAlt } from "react-icons/fa";
 import Modalfavoritelist from "../modals/Modalfavoritelist";
 import Modalviewfilm from '../modals/Modalviewfilm'
+import Modalupdate from '../modals/Modalupdatefilm'
 var movieshow = [{
   title: '',
   description: '',
@@ -16,26 +17,41 @@ class Cardmovies extends React.Component {
   state = {
     show: false,
     showfilm: false,
+    showupdate: false,
+    indexOffilmtoupdate: '',
     allmovies: this.props.Filmslist,
     favoritecount: 0,
     Moviesid: [],
   };
-
+  // show modal for favorite
   showModal = () => {
     this.setState({ show: true });
 
   };
+  // Hide modal for favorite 
+  hideModal = () => {
+    this.setState({ show: false });
+  };
+
+  //show modal for update film
+  showModalupdate = () => {
+    this.setState({ showupdate: true });
+    console.log('show')
+  };
+  // Hide modal for update film
+  hideModalupdate = () => {
+    this.setState({ showupdate: false });
+    console.log('hide')
+  };
+  // Show modal for view film
   showModalfilm = () => {
     this.setState({ showfilm: true });
 
   };
-  hideModal = () => {
-    this.setState({ show: false });
-  };
+  // Hide modal fo view film 
   hideModalfilm = () => {
     this.setState({ showfilm: false });
   };
-
   // add movie to favorite list and incriment shopping cart number
   favorite = (id) => {
     var x = this.state.favoritecount + 1;
@@ -69,14 +85,22 @@ class Cardmovies extends React.Component {
     console.log(favesList)
   }
 
+  // Update film 
+  update = (el) => {
+    for (let i = 0; i < this.props.Filmslist.length; i++)
+      if (this.props.Filmslist[i].id === el.id) { this.setState({ indexOffilmtoupdate: i }) }
+    console.log(this.state.indexOffilmtoupdate)
+  }
+
   render() {
     return (
       <div>
-        <hr/>
-        <button className="favoriteicon">  
-        {this.state.favoritecount} <FaHeart color='red' size='35' onClick={this.showModal} />
+        <hr />
+
+        <button className="btn btn-link favoriteicon">
+          {this.state.favoritecount} <FaHeart color='red' size='35' onClick={this.showModal} />
         </button>
-      
+
         <div className="fav"> </div>
 
         <main>
@@ -96,8 +120,18 @@ class Cardmovies extends React.Component {
           ></Modalviewfilm>
         </main>
 
+        <main>
+          <Modalupdate
+            state={this.state}
+            showupdate={this.state.showupdate}
+            showModalupdate={this.showModalupdate}
+            Filmslist={this.props.Filmslist}
+            handleCloseupdate={this.hideModalupdate}
+          ></Modalupdate>
+        </main>
+
         <div className="cards">
-          
+
           {this.props.films.map((el) => (
             <div className="cardfilm text-center">
               <Card>
@@ -132,9 +166,10 @@ class Cardmovies extends React.Component {
                       onClick={() => this.favorite(el.id)}
                       color="black"
                     >
-                      Favori{" "}
+                      Modifier{" "}
                     </FaHeart>
-                    <FaPencilAlt className="btnmodifie" size="30" color="dark">
+
+                    <FaPencilAlt onClick={() => { this.update(el); this.showModalupdate() }} className="btnmodifie" size="30" color="dark">
                       Modifé{" "}
                     </FaPencilAlt>
 

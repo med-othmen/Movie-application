@@ -10,10 +10,10 @@ class Hedearnav extends React.Component {
             <hr />
             <div className="utilisateur">
                 <div>
-                    <img src={localStorage.getItem('img')} alt='rrr' />
+                    <img width='80' src={localStorage.getItem('img')} alt='rrr' />
                 </div>
                 <div>
-                <h1>{localStorage.getItem('nom')}</h1>
+    <h1>{localStorage.getItem('nom')}{' '}{localStorage.getItem('prenom')}</h1>
                 {localStorage.getItem('email')}
                 </div>
             </div>
@@ -24,7 +24,7 @@ class Hedearnav extends React.Component {
                     <MDBCol md="14">
                         <div className="input-group md-form form-sm form-1 pl-0">
                             <input className="form-control my-0 py-1" type="text" placeholder="Trouver un film à regarder" aria-label="Search" onChange={this.props.search} />
-                            <MDBBtn className='btnresetsearch' color="warning" onClick={this.props.resetsearch}>Réinitialiser la recherche</MDBBtn>
+                            <MDBBtn className='btnresetsearch' color="info" onClick={this.props.resetsearch}>Réinitialiser la recherche</MDBBtn>
                             {this.props.state.ratesearch.map((el, i) =>
 
                                 <button class="btn btn-link"
