@@ -1,0 +1,37 @@
+.btN{
+    width: 400px;
+      border-radius:  0;
+        display: flex;
+        justify-content: center;
+
+    }
+    .btN :hover{
+        color:yellow
+    }
+
+
+    .btnsearch{
+        border-radius:  0 ;
+        width: 150px;
+        margin-left: 0.5cm;
+       
+    }
+    .header{
+        margin-top: 0cm;
+        
+        width: 950px;
+      }
+
+      .btnresetsearch{
+          border-radius: 0;
+          margin-left: 10px;
+      }
+
+      .utilisateur{
+         
+          display: flex;
+          
+      }
+      .utilisateur>div{
+          margin-left: 1cm;
+      }

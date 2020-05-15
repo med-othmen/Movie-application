@@ -1,0 +1,119 @@
+.btnfavori {
+    width: 150px;
+    border-radius: 0;
+    margin-bottom: 25px;
+    color: red;
+}
+
+.btnfavori :hover {
+    color: red;
+    cursor: pointer;
+    
+}
+
+.btnremove {
+    width: 120px;
+    border-radius: 0;
+    margin-bottom: 25px;
+}
+
+.btnremove :hover {
+    color: green;
+    cursor: pointer;
+}
+
+.btnmodifie {
+    width: 120px;
+    border-radius: 0;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.btnmodifie :hover {
+    color: yellow;
+    cursor: pointer;
+}
+
+.actionBTNs {
+    display: flex;
+}
+
+.cards {
+    display: flex;
+    width: 1000px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 25px;
+}
+
+.cardfilm {
+    position: relative;
+    width: 210px;
+    align-items: center;
+
+    align-items: center;
+    width: 200px;
+}
+
+.favcard th img {
+    margin-right: 2cm;
+    height: 30px;
+}
+
+.favcard th {
+    margin-left: 1cm;
+    margin-right: 1cm;
+}
+
+.modal {
+    
+    overflow: auto;
+    width: 700px;
+    height: 530px;
+    margin-left: 7cm;
+    margin-top: 2cm;
+    padding-top: 0.5cm;
+    background: lightgrey;
+}
+
+.modal-main button {
+    border: none;
+    margin-left: 19cm;
+}
+
+.modal-main img {
+    width: 50px;
+}
+
+.modalfavori {
+   
+    background: red;
+   
+}
+
+
+
+
+.display-block {
+    display: table-row;
+}
+
+.display-none {
+    display: none;
+}
+
+.cardshow {
+    width: 350px;
+    margin-left: 5cm;
+}
+
+.cardshow img {
+    margin-left: 1cm;
+    margin-top: 1cm;
+}
+
+.btnshow {
+    border-radius: 0;
+    width: 200px;
+    margin-left: 7cm;
+}

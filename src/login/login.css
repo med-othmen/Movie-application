@@ -1,0 +1,43 @@
+body{
+
+  background-color: white;
+ 
+  }
+.login{
+
+display: flex;
+justify-content: center;
+margin-top: 45px;
+
+height: 579px;
+
+
+
+ 
+  }
+  .buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    justify-content: space-around;
+   
+   
+  }
+
+  .Form{
+
+margin: 100px;
+
+    
+    }
+
+    .CI2{
+      width: 190px;
+      margin-left: 17px;
+    }
+    .CI1{
+      margin-top: 15px;
+      width: 190px;
+      margin-left: 17px;
+      margin-bottom: 15px;
+    }

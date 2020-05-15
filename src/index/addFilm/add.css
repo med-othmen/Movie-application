@@ -1,0 +1,30 @@
+.addfilm{
+    margin:0 35px;
+    position: relative;margin-top: -2cm;
+    text-align: center;
+   border:black 15px 0 ;
+    width:350px
+  
+    }
+   
+    .addfilm input{
+      margin-top: 20px;
+      width: 245px;
+    }
+    
+    .description{
+      margin-top: 20px;
+    }
+    .addsectiontitle{
+      text-align: center;
+      font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 22px;
+letter-spacing: 0.8px;
+word-spacing: -3.6px;
+color: #000000;
+font-weight: 700;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+text-transform: uppercase;
+    }

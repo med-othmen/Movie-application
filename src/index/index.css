@@ -1,0 +1,48 @@
+body{
+
+margin-left: 0.5cm;
+font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+font-size: 16px;
+letter-spacing: 0.8px;
+
+color: #000000;
+font-weight: 900;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: normal;
+
+}
+.Filmlist{
+  width: auto;
+ 
+}
+.table{
+ background-color: white;
+
+}
+.btnwatch{
+  border-radius: 0;
+  margin-bottom: 25px;
+  width: 120px;
+}
+
+.btnadd{
+  border-radius:  0 ;
+  width: 250px;
+  margin-top: 20px;
+  
+}
+
+
+.main{
+  
+  display: flex;
+  justify-content: space-around;
+ 
+}
+.favoriteicon{
+  font-size: 20px;
+  color:black;
+  float: right;
+}
+
