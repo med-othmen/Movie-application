@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
 
 import './index.css'
 import Searchbar from './Searchbar/Searchbar'
 import Addfilm from './addFilm/add'
 import Cardmovies from './cardMovie/Cardmovie'
+
 
 // Movie slist As our Database
 var Filmslist = [
@@ -94,7 +95,7 @@ class Index extends React.Component {
     filmsfilterbyrate = Filmslist.filter((el) => el.rate >= r)
     this.setState({ films: filmsfilterbyrate })
 
-    this.setState({ bgcolor: "yellow" })
+    this.setState({ bgcolor: "blue" })
     this.setState({ indexofRate: r })
     console.log('tab filter par rate ', filmsfilterbyrate)
 
@@ -176,14 +177,13 @@ class Index extends React.Component {
     test.img = e.target.value
   }
   //Adding the film to movie list 
-  addfilm = (e) => {
+  addfilm = () => {
 
     if ((test.title === undefined) | (test.description === undefined) | (test.rate === undefined) | (test.cat === undefined))
       alert('svp saisir les données de nouveau film  ')
     else {
       test.id = Filmslist[Filmslist.length - 1].id + 1
       Filmslist.unshift(test);
-      alert(e.target.value)
       this.setState({ films: Filmslist });
       test = []
 
@@ -208,10 +208,10 @@ class Index extends React.Component {
     return <div className="Filmlist" >
       <Searchbar state={this.state} search={this.search} getrate={this.getrate} resetsearch={this.resetsearch} />
       <div className="main">
-
         <div>
-          <Cardmovies state={this.state} films={this.state.films} remove={this.removefilm} Filmslist={Filmslist} />
-
+          
+            <Cardmovies state={this.state} films={this.state.films} remove={this.removefilm} Filmslist={Filmslist} />
+        
         </div>
         <Addfilm test={test} state={this.state} verifpicture={this.verifpicture} verifAddTitle={this.verifAddTitle} verifAddDesc={this.verifAddDesc} verifAddRate={this.verifAddRate} verifAddCetogrie={this.verifAddCetogrie} addfilm={this.addfilm} />
       </div>

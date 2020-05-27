@@ -18,36 +18,26 @@ height: 579px;
   .buttons{
     display: flex;
     flex-direction: column;
-   
+    margin-top: 15px;
     justify-content: space-around;
-  margin-left: 10px; margin-right: 10px; 
-    
+   
+   
   }
 
   .Form{
-    background-color: lightseagreen;
 
-    height: 350px;
-    width: 350px;
-    margin-top: 3cm;
-    border-radius: 10px;
-    
+margin: 100px;
+
     
     }
-    
 
     .CI2{
-      width: 328px;
-     
+      width: 190px;
+      margin-left: 17px;
     }
     .CI1{
       margin-top: 15px;
-      width: auto;
-     
+      width: 190px;
+      margin-left: 17px;
       margin-bottom: 15px;
-    }
-
-    .inputlogin{
-      margin-top: 30px;
-      margin-left: 0;
     }

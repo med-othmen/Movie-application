@@ -9,10 +9,19 @@
         color:yellow
     }
 
+    .result{
+        margin-top: 1cm;
+        
+    }
 
-
+    .btnsearch{
+        border-radius:  0 ;
+        width: 150px;
+        margin-left: 0.5cm;
+       
+    }
     .header{
-        margin-top: 0cm;
+        margin-right: 4cm;
         
         width: 950px;
       }
@@ -20,16 +29,4 @@
       .btnresetsearch{
           border-radius: 0;
           margin-left: 10px;
-      }
-
-      .utilisateur{
-         
-          display: flex;
-          padding: 4px;
-          margin-right: 20px;
-         
-           
-      }
-      .utilisateur>div{
-          margin-left: 1cm;
       }

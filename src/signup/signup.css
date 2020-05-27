@@ -2,7 +2,7 @@
 
   display: flex;
   justify-content: center;
-  margin-top: 8px;
+  margin-top: 45px;
 
       }
 
@@ -12,23 +12,5 @@
       font-size: 15px;
     }
      
-    .form{
-      background-color: lightseagreen;
-      border-radius: 5px;
-      width: 350px;
-      height: 650px;
-    }
-       
     
-    .buttonssignup{
-      display: flex;
-      justify-content: space-around;
-    }
-    .C{
-    
-      width: 150px;
-    }
-
-    .inputpart{
-      margin-left: 0;
-    }
+        
